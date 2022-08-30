@@ -8,6 +8,8 @@
 import UIKit
 
 class DetailedContactsTableViewController: UITableViewController {
+    
+    var contacts = [Person]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,24 +24,25 @@ class DetailedContactsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return contacts.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 2
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailedContact", for: indexPath)
+        let contact = contacts[indexPath.section]
+        
+        var content = cell.defaultContentConfiguration()
+        content.image = UIImage(systemName: "phone")
+        content.text = contact.phone
+        
+        cell.contentConfiguration = content
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
