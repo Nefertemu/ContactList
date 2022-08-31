@@ -7,12 +7,17 @@
 
 import UIKit
 
-class ContactInfoViewController: UIViewController {
+final class ContactInfoViewController: UIViewController {
+    
+    // MARK: - IBOutlets
+    @IBOutlet var phoneLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
+    
+    // MARK: - Public properties
     
     var person = Person(name: "", surname: "", phone: "", email: "")
     
-    @IBOutlet var phoneLabel: UILabel!
-    @IBOutlet var emailLabel: UILabel!
+    // MARK: - Life cycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()

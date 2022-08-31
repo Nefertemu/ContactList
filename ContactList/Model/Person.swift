@@ -7,13 +7,20 @@
 
 import UIKit
 
-let data = DataManager()
+// MARK: - Private properties
+
+private let data = DataManager()
 
 struct Person {
+    
+    // MARK: - Public properties
+    
     let name: String
     let surname: String
     let phone: String
     let email: String
+    
+    // MARK: - Static methods
     
     static func getUniqueContacts() -> [Person] {
         var contacts: [Person] = []
