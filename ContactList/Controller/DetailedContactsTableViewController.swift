@@ -10,10 +10,14 @@ import UIKit
 class DetailedContactsTableViewController: UITableViewController {
     
     var contacts = [Person]()
+    var string = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(contacts)
+        print(string)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,13 +39,25 @@ class DetailedContactsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailedContact", for: indexPath)
         let contact = contacts[indexPath.section]
         
-        var content = cell.defaultContentConfiguration()
-        content.image = UIImage(systemName: "phone")
-        content.text = contact.phone
+        if indexPath.row == 0 {
+            var content = cell.defaultContentConfiguration()
+            content.image = UIImage(systemName: "phone")
+            content.text = contact.phone
+            
+            cell.contentConfiguration = content
+        } else {
+            var content = cell.defaultContentConfiguration()
+            content.image = UIImage(systemName: "envelope")
+            content.text = contact.email
+            
+            cell.contentConfiguration = content
+        }
         
-        cell.contentConfiguration = content
-
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return contacts[section].name + " " + contacts[section].surname
     }
 
     /*

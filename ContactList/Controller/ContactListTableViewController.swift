@@ -10,11 +10,16 @@ import UIKit
 class ContactListTableViewController: UITableViewController {
     
     let contacts = Person.getUniqueContacts()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        print(contacts)
+
+        if let detailedVC = self.tabBarController?.viewControllers?[1].children.first as? DetailedContactsTableViewController {
+            detailedVC.contacts = contacts
+        }
+        
+//        print(contacts)
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -81,13 +86,11 @@ class ContactListTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let contactInfoVC = segue.destination as? ContactInfoViewController else { return }
-        guard let detailedInfoVC = segue.destination as? DetailedContactsTableViewController else { return }
-        
+
         guard let index = tableView.indexPathForSelectedRow else { return }
         let contact = contacts[index.row]
         contactInfoVC.person = contact
         
-        detailedInfoVC.contacts = contacts
+        
     }
-    
 }
