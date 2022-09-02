@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4312FBAE28C1154F00AACE67 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4312FBAD28C1154F00AACE67 /* TabBarViewController.swift */; };
 		437F12C528BE0A1A00BB51CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437F12C428BE0A1A00BB51CA /* AppDelegate.swift */; };
 		437F12C728BE0A1A00BB51CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437F12C628BE0A1A00BB51CA /* SceneDelegate.swift */; };
 		437F12CC28BE0A1A00BB51CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437F12CA28BE0A1A00BB51CA /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4312FBAD28C1154F00AACE67 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		437F12C128BE0A1A00BB51CA /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437F12C428BE0A1A00BB51CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		437F12C628BE0A1A00BB51CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		43B42F4B28BE166800764D05 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4312FBAD28C1154F00AACE67 /* TabBarViewController.swift */,
 				437F12D828BE0CA000BB51CA /* ContactListTableViewController.swift */,
 				43B42F4728BE100C00764D05 /* ContactInfoViewController.swift */,
 				43B42F4528BE0FD700764D05 /* DetailedContactsTableViewController.swift */,
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4312FBAE28C1154F00AACE67 /* TabBarViewController.swift in Sources */,
 				43B42F4D28BE16A100764D05 /* Person.swift in Sources */,
 				437F12D928BE0CA000BB51CA /* ContactListTableViewController.swift in Sources */,
 				437F12C528BE0A1A00BB51CA /* AppDelegate.swift in Sources */,

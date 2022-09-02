@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="4017" y="508"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="csc-QR-KC3">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zWV-ec-zmN" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zWV-ec-zmN" customClass="TabBarViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="46B-SK-OJS">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -136,7 +136,6 @@
         <!--Contacts-->
         <scene sceneID="6Ja-bi-xiv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RkW-k5-IxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zcG-yh-CrY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Contacts" image="person.circle.fill" catalog="system" id="ErD-8Y-W7P"/>
                     <toolbarItems/>
@@ -149,6 +148,7 @@
                         <segue destination="fex-om-jcy" kind="relationship" relationship="rootViewController" id="lQQ-ak-YK3"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RkW-k5-IxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="738" y="508"/>
         </scene>

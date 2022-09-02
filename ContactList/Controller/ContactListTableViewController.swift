@@ -11,21 +11,19 @@ final class ContactListTableViewController: UITableViewController {
     
     // MARK: - Private properties
     
-    private let contacts = Person.getUniqueContacts()
+    var contacts = [Person]()
     
     // MARK: - Life cycle methods
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        passContacts()
-    }
-    
-    // MARK: - Private methods
-    
-    private func passContacts() {
-        guard let detailedVC = self.tabBarController?.viewControllers?.last?.children.first as? DetailedContactsTableViewController else { return }
-        detailedVC.contacts = contacts
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
+//    
+//    // MARK: - Private methods
+//    
+//    private func passContacts() {
+//        
+//    }
     
     // MARK: - Table view data source
     
