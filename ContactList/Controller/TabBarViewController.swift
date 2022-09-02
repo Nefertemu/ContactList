@@ -16,7 +16,6 @@ class TabBarViewController: UITabBarController {
     }
     
     private func passContacts() {
-        
         let contacts = Person.getUniqueContacts()
         
         guard let firstNavigationVC = viewControllers?.first as? UINavigationController else { return }

@@ -45,7 +45,7 @@ final class DetailedContactsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return contacts[section].name + " " + contacts[section].surname
+        return contacts[section].fullName
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

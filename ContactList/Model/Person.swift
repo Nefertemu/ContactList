@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - Private properties
 
-private let data = DataManager()
+private let data = DataStore()
 
 struct Person {
     
@@ -19,6 +19,10 @@ struct Person {
     let surname: String
     let phone: String
     let email: String
+    
+    var fullName: String {
+        name + " " + surname
+    }
     
     // MARK: - Static methods
     
@@ -30,12 +34,19 @@ struct Person {
         let shuffledPhones = data.phones.shuffled()
         let shuffledEmails = data.emails.shuffled()
         
-        for number in 0..<data.names.count {
+        let numberOfIterations = min(
+            shuffledNames.count,
+            shuffledSurnames.count,
+            shuffledPhones.count,
+            shuffledEmails.count
+        )
+        
+        for iteration in 0..<numberOfIterations {
             let person = Person(
-                name: shuffledNames[number],
-                surname: shuffledSurnames[number],
-                phone: shuffledPhones[number],
-                email: shuffledEmails[number])
+                name: shuffledNames[iteration],
+                surname: shuffledSurnames[iteration],
+                phone: shuffledPhones[iteration],
+                email: shuffledEmails[iteration])
             contacts.append(person)
         }
         

@@ -13,18 +13,6 @@ final class ContactListTableViewController: UITableViewController {
     
     var contacts = [Person]()
     
-    // MARK: - Life cycle methods
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
-//    
-//    // MARK: - Private methods
-//    
-//    private func passContacts() {
-//        
-//    }
-    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
