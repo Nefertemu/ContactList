@@ -7,10 +7,6 @@
 
 import UIKit
 
-// MARK: - Private properties
-
-private let data = DataStore()
-
 struct Person {
     
     // MARK: - Public properties
@@ -23,16 +19,20 @@ struct Person {
     var fullName: String {
         name + " " + surname
     }
+}
+
+
+extension Person {
     
     // MARK: - Static methods
     
     static func getUniqueContacts() -> [Person] {
         var contacts: [Person] = []
         
-        let shuffledNames = data.names.shuffled()
-        let shuffledSurnames = data.surnames.shuffled()
-        let shuffledPhones = data.phones.shuffled()
-        let shuffledEmails = data.emails.shuffled()
+        let shuffledNames = DataStore.shared.names.shuffled()
+        let shuffledSurnames = DataStore.shared.surnames.shuffled()
+        let shuffledPhones = DataStore.shared.phones.shuffled()
+        let shuffledEmails = DataStore.shared.emails.shuffled()
         
         let numberOfIterations = min(
             shuffledNames.count,
